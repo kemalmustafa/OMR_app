@@ -1,0 +1,30 @@
+#result {
+    display: none;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #fffbd1;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: Consolas, "Courier New", monospace;
+    white-space: pre-wrap;
+}
+
+.json-key {
+    color: #92278f;
+}
+
+.json-string {
+    color: #3ab54a;
+}
+
+.json-number {
+    color: #1c00cf;
+}
+
+.json-boolean {
+    color: #f06292;
+}
+
+.json-null {
+    color: #aa0000;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='fonts/google-font.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='fonts/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='fonts/simple-line-icons.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/result-styles.css') }}">
+</head>
+<body id="page-top">
+<header class="d-flex masthead" style="background-image:url('{{ url_for('static', filename='img/bg-masthead.jpg') }}');">
+    <div class="container my-auto text-center">
+        <h1 class="mb-1">OMR App Tester</h1>
+        <h3 class="mb-5"><em>Web API</em></h3>
+        <form action="{{action}}" method="post" enctype="multipart/form-data" class="btn btn-primary btn-xl">
+            <div class="form-group">
+                <label for="image">Resim Seçin</label>
+                <input type="file" class="form-control" id="image" name="image" required>
+            </div>
+            <br>
+            <button type="submit" class="btn btn-primary">Gönder</button>
+        </form>
+        <div id="result" class="mt-4">
+            <pre id="json-content"></pre>
+        </div>
+    </div>
+</header>
+<footer class="footer text-center">
+    <div class="container">
+        <ul class="list-inline mb-5">
+            <li class="list-inline-item">&nbsp;<a class="link-light social-link rounded-circle" href="#"><i class="icon-social-facebook"></i></a></li>
+            <li class="list-inline-item">&nbsp;<a class="link-light social-link rounded-circle" href="#"><i class="icon-social-twitter"></i></a></li>
+            <li class="list-inline-item">&nbsp;<a class="link-light social-link rounded-circle" href="#"><i class="icon-social-github"></i></a></li>
+        </ul>
+        <p class="text-muted mb-0 small">Copyright &nbsp;© OMR App 2024</p>
+    </div>
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fa fa-angle-up"></i>
+    </a>
+</footer>
+<script src="{{ url_for('static', filename='bootstrap/js/bootstrap.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/stylish-portfolio.js') }}"></script>
+<script src="{{ url_for('static', filename='js/result-script.js') }}"></script>
+</body>
+</html>
